@@ -1,0 +1,11 @@
+{
+  "name": "judoscale-adapter-proxy-server",
+  "version": "1.0.0",
+  "description": "A tiny proxy server that adds X-Request-Start header to every request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam McCrea",
+  "license": "ISC"
+}
