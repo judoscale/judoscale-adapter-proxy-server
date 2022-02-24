@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // This is a very basic proxy server that adds an X-Request-Start header to
 // each request, similar to Heroku's router: https://devcenter.heroku.com/articles/http-routing#heroku-headers
 // The header is needed to calculate request queue time in Judoscale web adapters,
