@@ -12,6 +12,14 @@ const http = require('http');
 const port = Number(process.env.PORT)
 const targetPort = port + 100
 
+function randStr() {
+  return (((1+Math.random())*0x10000)|0).toString(16).substring(1)
+}
+
+function requestId() {
+  return (randStr()+randStr()+'-'+randStr()+'-'+randStr()+'-'+randStr()+'-'+randStr()+randStr()+randStr())
+}
+
 function onRequest(req, res) {
   const options = {
     hostname: 'localhost',
@@ -20,7 +28,8 @@ function onRequest(req, res) {
     method: req.method,
     headers: {
       ...req.headers,
-      'X-Request-Start': new Date().getTime()
+      'X-Request-Start': new Date().getTime(),
+      'X-Request-ID': requestId()
     }
   };
 
