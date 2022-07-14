@@ -12,27 +12,6 @@ const http = require("http");
 const port = Number(process.env.PORT);
 const targetPort = port + 100;
 
-function randStr() {
-  return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
-}
-
-function requestId() {
-  return (
-    randStr() +
-    randStr() +
-    "-" +
-    randStr() +
-    "-" +
-    randStr() +
-    "-" +
-    randStr() +
-    "-" +
-    randStr() +
-    randStr() +
-    randStr()
-  );
-}
-
 function onRequest(req, res) {
   const options = {
     hostname: "127.0.0.1",
@@ -42,7 +21,7 @@ function onRequest(req, res) {
     headers: {
       ...req.headers,
       "X-Request-Start": new Date().getTime(),
-      "X-Request-ID": requestId(),
+      "X-Request-ID": "00000000-0000-0000-0000-000000000000",
     },
   };
 
