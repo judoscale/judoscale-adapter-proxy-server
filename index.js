@@ -35,7 +35,7 @@ function requestId() {
 
 function onRequest(req, res) {
   const options = {
-    hostname: "localhost",
+    hostname: "127.0.0.1",
     port: targetPort,
     path: req.url,
     method: req.method,
