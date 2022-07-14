@@ -1,6 +1,6 @@
 {
   "name": "judoscale-adapter-proxy-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny proxy server that adds X-Request-Start header to every request",
   "main": "index.js",
   "scripts": {
